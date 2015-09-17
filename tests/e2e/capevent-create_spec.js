@@ -28,7 +28,19 @@ describe('Event creation', function() {
     });
     
     it('should not allow to create a Cap Event if title if not filled', function() {
+        var titleField = element(by.model('capEvent.title'));
+        var dateField = element(by.model('capEvent.date'));
+        var categoryField = element(by.model('capEvent.category'));
+        var participantsField = element(by.model('capEvent.participants'));
+        var geolocationField = element(by.model('capEvent.geolocation'));
+        var saveButton = element(by.id('save'));
+         
+        dateField.sendKeys('04 Oct 2015');        
+        categoryField.sendKeys('Sport');        
+        participantsField.sendKeys('1');        
+        geolocationField.sendKeys('53.593051, 10.012349');
         
+        expect(saveButton.isEnabled()).toEqual(false);
     });
     
 });
