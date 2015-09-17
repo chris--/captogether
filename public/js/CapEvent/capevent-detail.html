@@ -7,6 +7,7 @@
                 <label class="col-md-4 control-label" for="title">Title</label>
                 <div class="col-md-4">
                     <input id="title" name="title" type="text" placeholder="Please enter a title" class="form-control input-md" ng-model="capEvent.title" required>
+                    <span ng-show="capEventDetailForm.title.$error.required && capEventDetailForm.title.$dirty">Event title must be filled.</span>
                 </div>
             </div>
 
