@@ -1,4 +1,5 @@
 <div>
+    <p>{{ helloWorld }}</p>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -11,12 +12,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Sample ID</td>
-                <td>Sample title</td>
-                <td>Sample date</td>
-                <td>Sample category</td>
-                <td>Sample participants</td>
+            <tr ng-repeat="capEvent in capEvents">
+                <td>{{capEvent.id}}</td>
+                <td>{{capEvent.title}}</td>
+                <td>{{capEvent.date}}</td>
+                <td>{{capEvent.category}}</td>
+                <td>{{capEvent.participants}}</td>
                 <td>
                     <button type="button" class="btn btn-xs btn-primary">Show Details</button>
                     <button type="button" class="btn btn-xs btn-primary">Add Participant</button>

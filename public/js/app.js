@@ -11,6 +11,10 @@ app.config(function ($routeProvider) {
         templateUrl: '/js/CapEvent/capevent-detail.html',
         controller: 'CapEventDetailController'
     });
+    $routeProvider.when('/capevent/list', {
+        templateUrl:  'js/CapEvent/capevent-list.html',
+        controller: 'CapEventListController'
+    });
 });
 
 console.log('Angular module initialized!');
