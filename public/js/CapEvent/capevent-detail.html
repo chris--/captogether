@@ -51,6 +51,15 @@
                 </div>
             </div>
 
+            <!-- Map view -->
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-2">
+                    <map center="{{ capEvent.geolocation }}" zoom="14">
+                        <marker position="{{ capEvent.geolocation }}" title="{{capEvent.title}}"></marker>
+                    </map>
+                </div>
+            </div>
+
         </fieldset>
     </form>
 </div>
