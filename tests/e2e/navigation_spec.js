@@ -14,7 +14,9 @@ describe('Navigation bar', function() {
     });
     
     it('should redirect to View Events page', function() {
-        
+        var viewButton = element(by.id('viewButton'));
+        viewButton.click();
+        expect(browser.getCurrentUrl()).toMatch(/\/capevent\/list/);
     });
     
 });
