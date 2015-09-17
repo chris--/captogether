@@ -18,8 +18,8 @@
                 <td>{{capEvent.category}}</td>
                 <td>{{capEvent.participants}}</td>
                 <td>
-                    <button type="button" class="btn btn-xs btn-primary">Show Details</button>
-                    <button type="button" class="btn btn-xs btn-primary">Add Participant</button>
+                    <button type="button" class="btn btn-xs btn-primary" ng-click="showDetail(capEvent.id)">Show Details</button>
+                    <button type="button" class="btn btn-xs btn-primary" ng-click="addParticipant(capEvent.id)">Add Participant</button>
                 </td>
             </tr>
         </tbody>
