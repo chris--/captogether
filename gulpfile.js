@@ -40,7 +40,7 @@ gulp.task('runserver', function() {
 });
 
 gulp.task('runtests', function() {
-  gulp.src(['tests/e2e/*.js'])
+  gulp.src(['tests/e2e/*_spec.js'])
     .pipe(protractor({
       configFile: 'tests/protractor-conf.js'
     }))
@@ -51,7 +51,7 @@ gulp.task('runtests', function() {
 });
 
 gulp.task('test', function(callback) {
-    runSequence('runserver', 'runtests', callback);
+    runSequence('runLocalRestEndpoint', 'runserver', 'runtests', callback);
 });
 
 gulp.task('serve', function(callback) {
